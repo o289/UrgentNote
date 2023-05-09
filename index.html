@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrgentNote.app</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;600;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;600;900&display=swap" rel="stylesheet">
+    <!-- js -->
+    <script>
+        // フォントサイズの変更
+        function font_family(family){
+            const ul = document.getElementById('ul')
+            ul.style.fontFamily = family
+        }
+        function font_size(size){
+            const ul = document.getElementById('ul')
+            ul.style.fontSize = size + "px"
+        }
+        function font_weight(weight){
+            const ul = document.getElementById('ul')
+            ul.style.fontWeight = weight;
+        };
+        function line_height(height){
+            const ul = document.getElementById('ul')
+            ul.style.lineHeight = height;
+        }
+    </script>
+    <!-- css -->
+    <link rel="stylesheet" href="https://o289.github.io/UrgentNote/style.css">
+</head>
+<body>
+    <div class="displays">
+        <img src="https://o289.github.io/UrgentNote/img/plus.png.webp" alt="add" id="other_add">
+        <div id="create">
+            <form id="form">
+                <a href="https://o289.github.io/UrgentNote/instructions.html" class="instruction">このアプリについて</a>
+                <h2>テキストエリア</h2>
+                <textarea name="" id="textarea" cols="50" rows="30" placeholder="メモを追加" autocomplete="off"></textarea>
+                <div class="buttons">
+                    <button id="reset" class="button">リセット</button>
+                    <button id="add" class="button">追加</button>
+                    <button src="" alt="deletion" id="deletion" class="button">全削除</button>
+                </div>
+            </form>
+        </div>
+        <div id="display">
+            <ul id="ul"></ul>
+        </div>
+        <img src="https://o289.github.io/UrgentNote/img/setting.png" alt="" id="other_setting">
+        <div id="setting">
+            <h2>設定エリア</h2>
+            <h3 class="setting_title">文字タイプ</h3>
+            <div class="setting_buttons">
+                <button id="family1" class="setting_button" onclick="font_family('Noto Sans JP')">1</button>
+                <button id="family2" class="setting_button" onclick="font_family('Noto Serif JP')">2</button>
+            </div>
+            <h3 class="setting_title">文字サイズ</h3>
+            <div class="setting_buttons">
+                <button id="size1" class="setting_button" onclick="font_size(24)">小</button>
+                <button id="size2" class="setting_button" onclick="font_size(36)">中</button>
+                <button id="size3" class="setting_button" onclick="font_size(48)">大</button>
+            </div>
+            <h3 class="setting_title">文字の太さ</h3>
+            <div class="setting_buttons">
+                <button id="weight1" class="setting_button" onclick="font_weight(300)">細</button>
+                <button id="weight2" class="setting_button" onclick="font_weight(600)">中</button>
+                <button id="weight3" class="setting_button" onclick="font_weight(900)">太</button>
+            </div>
+            <h3 class="setting_title">行間</h3>
+            <div class="setting_buttons">
+                <button id="line_height1" class="setting_button" onclick="line_height(1.5)">低</button>
+                <button id="line_height2" class="setting_button" onclick="line_height(2.2)">中</button>
+                <button id="line_height3" class="setting_button" onclick="line_height(3)">高</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://o289.github.io/UrgentNote/index.js"></script>
+</body>
+</html>
