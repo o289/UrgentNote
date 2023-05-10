@@ -30,8 +30,7 @@ if(
             shortCut1()
         } 
         else {
-            useBoth()
-            mobile();
+            window.location.replace('https://www.example.com/403.html');
         } 
     };
     // 共通して使うものをまとめる
@@ -41,7 +40,7 @@ if(
         addNote();
         removeTextAll();
     }
-    // 
+    // サイズが1500pxになったら一度再リロードする
     window.addEventListener('resize', function(){
         if((width < 1500 && window.innerWidth >= 1500) 
         || (width >= 1500 && window.innerWidth < 1500)){
@@ -239,47 +238,47 @@ function shortCut1(){
                 }),
                 new Mouse({
                     id: 'size1',
-                    v: '1'
+                    v: 'w'
                 }),
                 new Mouse({
                     id: 'size2',
-                    v: '2'
+                    v: 'e'
                 }),
                 new Mouse({
                     id: 'size3',
-                    v: '3'
+                    v: 'r'
                 }),
                 new Mouse({
                     id: 'weight1',
-                    v: '4'
+                    v: 'z'
                 }),
                 new Mouse({
                     id: 'weight2',
-                    v: '5'
+                    v: 'x'
                 }),
                 new Mouse({
                     id: 'weight3',
-                    v: '6'
+                    v: 'c'
                 }),
                 new Mouse({
                     id: 'line_height1',
-                    v: '7'
+                    v: 'b'
                 }),
                 new Mouse({
                     id: 'line_height2',
-                    v: '8'
+                    v: 'n'
                 }),
                 new Mouse({
                     id: 'line_height3',
-                    v: '9'
+                    v: 'm'
                 }),
                 new hidden({
                     dis: 'create',
-                    n: ','
+                    n: '['
                 }),
                 new hidden({
                     dis: 'setting',
-                    n: '.'
+                    n: ']'
                 }),
             ];
         });
