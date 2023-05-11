@@ -10,6 +10,8 @@ const display = document.getElementById('display')
 const deletion = document.getElementById('deletion');
 const textarea = document.getElementById('textarea')
 const ul = document.getElementById('ul')
+const $introduction = document.getElementById('introduction');
+const $introduction_display = document.getElementById('introduction_display');
 // この3つのブラウザ以外のアクセスを拒否
 if(
     // Microsoft Edge
@@ -132,6 +134,10 @@ if(
         })
         localStorage.setItem('boxes', JSON.stringify(box));
     }
+    // 
+    $introduction.addEventListener('click', () => {
+        $introduction_display.classList.toggle('display');
+    });
 } else {
     window.location.replace('https://www.example.com/403.html');
 }

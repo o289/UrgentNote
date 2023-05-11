@@ -122,6 +122,38 @@ th,td{
     display: none;
 }
 /*  */
+/*  */
+.tab-area {
+    display: flex;/* flexで横並び */
+    border: 2px solid;
+    cursor: pointer;/* カーソルポインターに */
+}
+.tab {
+    width: calc(100%/3);/* calc関数を使用し、均等に3分割する */
+    padding: 5px;
+    text-align: center;/* 文字を中央に。 */
+}
+.tab:nth-child(n+2) {
+    border-left: 2px solid;
+}
+.tab.active {
+    background-color: #000;
+    color: #fff;
+}
+.panel {
+    display: none;
+    text-align: center;
+}
+.panel.active {
+    display: block;
+}
+#introduction_display{
+    display: none;
+}
+#introduction_display.display{
+    display: block;
+}
+/*  */
 /* メディア */
 @media (max-width: 1500px) {
     body{
@@ -217,57 +249,4 @@ th,td{
     #textarea{
         width: 95%;
     }
-}
-/* 
-取扱説明書
-*/
-.body{
-    background-color: #fff;
-}
-.main-body{
-    background-color: aqua;
-    width: 60%;
-    min-height: 100vh;
-    height: 100%;
-    margin: 0 auto;
-}
-.tab-nav{
-    display: flex;
-}
-.tab-nav-item{
-    background-color: #000;
-    color: #fff;
-    margin-right: 5px;
-    padding: 8px 15px;
-    text-decoration: none;
-    border-radius: 5px 5px 0 0;
-}
-.tab-nav-item.is-active{
-    background-color: #ff0000;
-}
-.tab-contents{
-    border: 2px solid #000;
-    padding: 20px;
-}
-.tab-contents-item{
-    display: none;
-}
-.shoutCut{}
-.shoutCut-title{}
-.shoutCut-introductions{}
-.shoutCut-introduction{
-    list-style: none;
-    border:2px solid #000;
-    width: 50%;
-    margin: 0 auto;
-    padding: 5px 10px;
-}
-.shoutCut-info{
-    padding: 10px 0;
-}
-.information{
-    line-height: 2;
-}
-.setting-information{
-    margin-top: 50px;
 }
