@@ -140,15 +140,26 @@ th,td{
     background-color: #000;
     color: #fff;
 }
-.panel {
+.panel{
     display: none;
     text-align: center;
+    width: 60%;
+    background-color: #ddd;
 }
 .panel.active {
     display: block;
 }
+#introduction{
+    position: relative;
+    z-index: 2;
+    margin: 5px auto;
+}
 #introduction_display{
     display: none;
+    position: relative;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
 }
 #introduction_display.display{
     display: block;
