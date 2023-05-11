@@ -156,6 +156,7 @@ th,td{
 }
 #introduction_display{
     display: none;
+    background-color: #fff;
     position: absolute;
     top: 0;
     left: 0;
