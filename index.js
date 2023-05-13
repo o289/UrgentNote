@@ -150,7 +150,7 @@ function shortCut1(){
                     const html = document.getElementById(obj.id);
                     const short = obj.v
                     if(mac !== -1){
-                        if(event.metaKey && event.key == short){
+                        if(event.metaKey && event.ctrlKey && event.key == short){
                             event.preventDefault()
                             const mE = new MouseEvent("click", {
                                 "view": window,
@@ -161,7 +161,7 @@ function shortCut1(){
                         }
                     }
                     else if(windows !== -1){
-                        if(event.ctrlKey && event.key == short){
+                        if(event.ctrlKey && event.altKey && event.key == short){
                             event.preventDefault()
                             const mE = new MouseEvent("click", {
                                 "view": window,
@@ -244,39 +244,39 @@ function shortCut1(){
                 }),
                 new Mouse({
                     id: 'size1',
-                    v: 'w'
+                    v: '1'
                 }),
                 new Mouse({
                     id: 'size2',
-                    v: 'e'
+                    v: '2'
                 }),
                 new Mouse({
                     id: 'size3',
-                    v: 'r'
+                    v: '3'
                 }),
                 new Mouse({
                     id: 'weight1',
-                    v: 'z'
+                    v: '4'
                 }),
                 new Mouse({
                     id: 'weight2',
-                    v: 'x'
+                    v: '5'
                 }),
                 new Mouse({
                     id: 'weight3',
-                    v: 'c'
+                    v: '6'
                 }),
                 new Mouse({
                     id: 'line_height1',
-                    v: 'b'
+                    v: '7'
                 }),
                 new Mouse({
                     id: 'line_height2',
-                    v: 'n'
+                    v: '8'
                 }),
                 new Mouse({
                     id: 'line_height3',
-                    v: 'm'
+                    v: '9'
                 }),
                 new hidden({
                     dis: 'create',
