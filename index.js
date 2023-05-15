@@ -2,6 +2,7 @@
 const agent = navigator.userAgent.toLowerCase();
 const mac = agent.indexOf('mac os x');
 const windows = agent.indexOf('windows nt');
+const android = agent.indexOf('')
 const width = window.innerWidth;
 // html要素を取得
 const add = document.getElementById('add')
