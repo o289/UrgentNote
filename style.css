@@ -170,6 +170,11 @@ th,td{
 #introduction_display.display{
     display: block;
 }
+.introductions
+.shoutCut{
+    overflow: scroll;
+    height: 100%;
+}
 /*  */
 /* メディア */
 @media (max-width: 1500px) {
